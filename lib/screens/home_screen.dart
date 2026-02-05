@@ -31,14 +31,13 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Horizontal Playlist Row
             SizedBox(
-              height: 200, // Increased slightly to fit text
+              height: 200,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => _buildAlbumCard(index),
                 separatorBuilder: (context, index) => const SizedBox(width: 16),
-                itemCount: 4,
+                itemCount: 3,
               ),
             ),
 
