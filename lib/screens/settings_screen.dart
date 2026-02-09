@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:music_app/widgets/appbar_widget.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -19,9 +20,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: ListView(
         children: [
           _buildSectionHeader('Account'),
-          _buildListTile(Icons.person_outline, 'Profile', 'Edit your info'),
+          _buildListTile(TablerIcons.user, 'Profile', 'Edit your info'),
           _buildListTile(
-            Icons.subscriptions_outlined,
+            TablerIcons.premium_rights,
             'Subscription',
             'Manage your plan',
           ),
@@ -29,17 +30,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(color: Colors.white24),
           _buildSectionHeader('Audio & Playback'),
           _buildListTile(
-            Icons.high_quality,
+            TablerIcons.headphones,
             'Audio Quality',
             'Extreme (320kbps)',
           ),
-          _buildSwitchTile(Icons.equalizer, 'Equalizer', _isEqualizerEnabled, (
-            bool newValue,
-          ) {
-            setState(() => _isEqualizerEnabled = newValue);
-          }),
           _buildSwitchTile(
-            Icons.volume_up_outlined,
+            TablerIcons.adjustments,
+            'Equalizer',
+            _isEqualizerEnabled,
+            (bool newValue) {
+              setState(() => _isEqualizerEnabled = newValue);
+            },
+          ),
+          _buildSwitchTile(
+            TablerIcons.volume,
             'Gapless Playback',
             _isGaplessPlaybackEnabled,
             (bool newValue) {
@@ -49,16 +53,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
           const Divider(color: Colors.white24),
           _buildSectionHeader('Storage & Downloads'),
-          _buildListTile(
-            Icons.download_for_offline_outlined,
-            'Download Location',
-            'SD Card',
-          ),
-          _buildListTile(
-            Icons.delete_sweep_outlined,
-            'Clear Cache',
-            '1.2 GB used',
-          ),
+          _buildListTile(TablerIcons.download, 'Download Location', 'SD Card'),
+          _buildListTile(TablerIcons.trash, 'Clear Cache', '1.2 GB used'),
 
           const Divider(color: Colors.white24),
           _buildSectionHeader('Support'),
