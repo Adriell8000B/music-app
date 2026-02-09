@@ -63,7 +63,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(color: Colors.white24),
           _buildSectionHeader('Support'),
           _buildListTile(Icons.help_outline, 'Help Center', null),
-          _buildListTile(Icons.info_outline, 'About', 'Version 2.4.0'),
+          _buildListTile(Icons.info_outline, 'Version', 'Version 1.0.0'),
 
           const SizedBox(height: 20),
           Center(
