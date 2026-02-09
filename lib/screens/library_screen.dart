@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:music_app/widgets/appbar_widget.dart';
 
 class LibraryScreen extends StatelessWidget {
@@ -62,7 +63,7 @@ class LibraryScreen extends StatelessWidget {
                         ),
                       ),
                       Icon(
-                        Icons.push_pin_outlined,
+                        TablerIcons.pin,
                         size: 20,
                         color: Colors.grey[400],
                       ),
@@ -86,6 +87,7 @@ class LibraryScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: isSelected ? Color(0xFF5271FF) : Colors.grey.shade300,
+          width: 1.5
         ),
       ),
       child: Text(
