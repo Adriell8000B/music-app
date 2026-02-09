@@ -38,20 +38,23 @@ class MyApp extends StatelessWidget {
 
           iconTheme: WidgetStateProperty.fromMap({
             WidgetState.selected: const IconThemeData(color: royalBlue),
-            WidgetState.any: const IconThemeData(color: Colors.white70),
           }),
           labelTextStyle: WidgetStateProperty.fromMap({
             WidgetState.selected: const TextStyle(color: royalBlue),
             WidgetState.any: const TextStyle(color: Colors.grey),
           }),
           elevation: 0,
-          indicatorColor: Colors.black,
+          overlayColor: WidgetStatePropertyAll(Colors.transparent),
         ),
 
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: nightBlue_2,
         ),
+
+        popupMenuTheme: PopupMenuThemeData(
+          color: nightBlue_2
+        )
       ),
       home: ShellScreen(),
     );
