@@ -62,11 +62,7 @@ class LibraryScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Icon(
-                        TablerIcons.pin,
-                        size: 20,
-                        color: Colors.grey[400],
-                      ),
+                      Icon(TablerIcons.pin, size: 20, color: Colors.grey[400]),
                     ],
                   ),
                 );
@@ -87,7 +83,7 @@ class LibraryScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: isSelected ? Color(0xFF5271FF) : Colors.grey.shade300,
-          width: 1.5
+          width: 1.5,
         ),
       ),
       child: Text(
